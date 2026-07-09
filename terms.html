@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пользовательское соглашение — New Chapter</title>
+  <style>
+    /* ----- Те же стили (копируем из index.html) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f8fafc;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #0b1a2e;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 20px 60px rgba(0, 20, 40, 0.06), 0 8px 24px rgba(0, 20, 40, 0.04);
+      padding: 2.5rem 2.8rem;
+      transition: all 0.2s;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.75rem; }
+      .container { padding: 1.8rem 1.4rem; border-radius: 20px; }
+    }
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 2px solid #eef2f6;
+      margin-bottom: 2rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      background: #0b1a2e;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: -0.5px;
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: #0b1a2e;
+    }
+    .brand-name span {
+      color: #3b6ea0;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 0.25rem;
+      background: #f1f5f9;
+      padding: 0.3rem;
+      border-radius: 40px;
+    }
+
+    .nav-menu a {
+      display: inline-block;
+      padding: 0.45rem 1.2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #4b647e;
+      transition: all 0.2s;
+    }
+    .nav-menu a:hover {
+      background: rgba(59, 110, 160, 0.08);
+    }
+    .nav-menu a.active {
+      background: #ffffff;
+      color: #0b1a2e;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.6rem;
+      color: #0b1a2e;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #4b647e;
+      margin-bottom: 2.2rem;
+      border-left: 4px solid #3b6ea0;
+      padding-left: 1.2rem;
+      background: #f5f9ff;
+      border-radius: 0 8px 8px 0;
+      padding: 0.8rem 1.2rem;
+    }
+    .subtitle strong {
+      color: #0b1a2e;
+    }
+
+    .section {
+      margin-top: 2.4rem;
+    }
+    .section h2 {
+      font-size: 1.5rem;
+      font-weight: 650;
+      letter-spacing: -0.3px;
+      color: #0b1a2e;
+      margin-bottom: 0.9rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px solid #e7edf5;
+    }
+    .section p {
+      margin-bottom: 0.9rem;
+      color: #1f3349;
+    }
+    .section ul {
+      margin: 0.6rem 0 1.2rem 1.8rem;
+      color: #1f3349;
+    }
+    .section li {
+      margin-bottom: 0.3rem;
+    }
+    .section li::marker {
+      color: #3b6ea0;
+    }
+
+    .highlight-box {
+      background: #f5f9ff;
+      border-radius: 14px;
+      padding: 1.2rem 1.6rem;
+      margin: 1.6rem 0;
+      border: 1px solid #e2ebf5;
+    }
+
+    .contact-email {
+      display: inline-block;
+      background: #eef2f6;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      font-weight: 500;
+      color: #0b1a2e;
+      font-size: 0.95rem;
+      margin-top: 0.2rem;
+    }
+    .telegram-channel {
+      display: inline-block;
+      background: #e5f0fa;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      font-weight: 500;
+      color: #1a4a7a;
+      font-size: 0.95rem;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, #dce4ed, transparent);
+      margin: 2.6rem 0 1.2rem;
+    }
+
+    .footer {
+      margin-top: 2.8rem;
+      padding-top: 1.6rem;
+      border-top: 2px solid #eef2f6;
+      font-size: 0.9rem;
+      color: #4b647e;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .footer a {
+      color: #1e4a6e;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .footer a:hover {
+      border-bottom-color: #1e4a6e;
+    }
+    .footer small {
+      display: block;
+      margin-top: 0.3rem;
+      font-size: 0.8rem;
+      color: #6f85a0;
+    }
+
+    .toc {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 1rem 1.6rem 1rem 2rem;
+      margin: 1.2rem 0 2rem;
+      border: 1px solid #e2ebf5;
+    }
+    .toc p {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: #0b1a2e;
+    }
+    .toc ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem 1.2rem;
+      margin: 0;
+      padding: 0;
+    }
+    .toc ul li {
+      margin: 0;
+    }
+    .toc ul li a {
+      color: #1e4a6e;
+      text-decoration: none;
+      font-size: 0.9rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .toc ul li a:hover {
+      border-bottom-color: #1e4a6e;
+    }
+    @media (max-width: 500px) {
+      .toc ul { flex-direction: column; gap: 0.1rem; }
+      .toc { padding: 0.8rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- ШАПКА С МЕНЮ -->
+    <header class="header">
+      <div class="brand">
+        <div class="brand-icon">NC</div>
+        <div class="brand-name">New <span>Chapter</span></div>
+      </div>
+      <nav class="nav-menu">
+        <a href="index.html">Политика данных</a>
+        <a href="terms.html" class="active">Соглашение</a>
+      </nav>
+    </header>
+
+    <h1>Пользовательское соглашение</h1>
+    <div class="subtitle">
+      <strong>Редакция от 29.06.2026</strong> &nbsp;·&nbsp; 
+      Документ регулирует отношения между пользователями и сервисом New Chapter
+    </div>
+
+    <nav class="toc" aria-label="Содержание соглашения">
+      <p>Содержание</p>
+      <ul>
+        <li><a href="#s1">1. Статус документа</a></li>
+        <li><a href="#s2">2. Предмет соглашения</a></li>
+        <li><a href="#s3">3. Регистрация и аккаунт</a></li>
+        <li><a href="#s4">4. Права и обязанности сторон</a></li>
+        <li><a href="#s5">5. Блокировка и удаление</a></li>
+        <li><a href="#s6">6. Интеллектуальные права</a></li>
+        <li><a href="#s7">7. Урегулирование споров</a></li>
+        <li><a href="#s8">8. Изменения соглашения</a></li>
+        <li><a href="#s9">9. Контакты</a></li>
+      </ul>
+    </nav>
+
+    <div class="section" id="s1">
+      <h2>1. Статус документа</h2>
+      <p>Настоящее Пользовательское соглашение определяет правила использования сервисов <strong>New Chapter</strong>. Принятие условий Соглашения является обязательным для использования функционала сервиса.</p>
+      <p><strong>Оператор и владелец сервиса:</strong> New Chapter.</p>
+    </div>
+
+    <div class="section" id="s2">
+      <h2>2. Предмет соглашения</h2>
+      <p>Администрация предоставляет Пользователю доступ к функционалу биржи: публикация заданий, отклики, чат, отзывы, профиль и иные функции сервиса.</p>
+    </div>
+
+    <div class="section" id="s3">
+      <h2>3. Регистрация и аккаунт</h2>
+      <ul>
+        <li>Пользователь обязуется предоставлять достоверные данные и поддерживать их актуальность.</li>
+        <li>Пользователь несет ответственность за сохранность данных доступа к аккаунту.</li>
+        <li>Запрещается передавать аккаунт третьим лицам или использовать чужой аккаунт без разрешения.</li>
+      </ul>
+    </div>
+
+    <div class="section" id="s4">
+      <h2>4. Права и обязанности сторон</h2>
+      <ul>
+        <li>Пользователь обязан соблюдать законодательство РФ и настоящие Правила.</li>
+        <li>Пользователь не вправе размещать незаконный, вредоносный или вводящий в заблуждение контент.</li>
+        <li>Администрация вправе ограничивать доступ к сервису при нарушениях.</li>
+      </ul>
+    </div>
+
+    <div class="section" id="s5">
+      <h2>5. Блокировка и удаление</h2>
+      <p>Администрация вправе временно ограничить или прекратить доступ пользователя к сервису при нарушении законодательства РФ, настоящего Соглашения и Правил сервиса.</p>
+      <p>При подозрении на мошенничество, взлом, спам или обход ограничений Администрация вправе применить временную блокировку аккаунта на период проверки обстоятельств.</p>
+    </div>
+
+    <div class="section" id="s6">
+      <h2>6. Интеллектуальные права</h2>
+      <p>Права на результаты работ, созданные в рамках задания, переходят заказчику в объеме, предусмотренном договоренностями сторон и применимым законодательством, как правило — после подтверждения выполнения и оплаты соответствующего задания.</p>
+    </div>
+
+    <div class="section" id="s7">
+      <h2>7. Урегулирование споров</h2>
+      <p>При возникновении технических сбоев, ошибок или иных проблем в работе сервиса без предварительного предупреждения в главном информационном рабочем Telegram-канале <span class="telegram-channel">@newChapterJob</span>, Пользователь обязан обращаться в службу поддержки по электронной почте <span class="contact-email">ncsupport@yandex.ru</span> или в поддержку в Telegram, указанную в Telegram-канале.</p>
+      <div class="highlight-box">
+        <p><strong>Время ожидания ответа не может быть ограничено</strong> – Администрация прилагает все усилия для оперативного реагирования, но не гарантирует мгновенного ответа.</p>
+      </div>
+    </div>
+
+    <div class="section" id="s8">
+      <h2>8. Изменения соглашения</h2>
+      <p>Администрация вправе изменять условия Соглашения. Новая редакция вступает в силу с даты публикации на официальных ресурсах сервиса.</p>
+    </div>
+
+    <div class="section" id="s9">
+      <h2>9. Контакты</h2>
+      <p>По вопросам работы сервиса: <span class="contact-email">ncsupport@yandex.ru</span></p>
+    </div>
+
+    <div class="divider"></div>
+    <div style="display: flex; flex-wrap: wrap; gap: 1.2rem 2.5rem; justify-content: space-between; align-items: center;">
+      <div>
+        <p style="font-weight: 500; color: #0b1a2e; margin: 0;">New Chapter</p>
+        <p style="margin: 0.2rem 0 0; font-size: 0.95rem; color: #4b647e;">
+          <span style="display: inline-block; margin-right: 1rem;">📧 ncsupport@yandex.ru</span>
+          <span style="display: inline-block;">📱 @newChapterJob</span>
+        </p>
+      </div>
+      <div style="text-align: right; font-size: 0.9rem; color: #4b647e;">
+        <span>Редакция от <strong>29.06.2026</strong></span>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div>
+        <span>© 2026 New Chapter</span>
+        <small>Все права защищены</small>
+      </div>
+      <div>
+        <a href="#top">↑ Наверх</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
