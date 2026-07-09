@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Политика обработки персональных данных — New Chapter</title>
   <style>
-    /* ----- Сброс и база ----- */
+    /* ----- Общие стили (как были) ----- */
     * {
       margin: 0;
       padding: 0;
@@ -35,16 +35,16 @@
       .container { padding: 1.8rem 1.4rem; border-radius: 20px; }
     }
 
-    /* ----- Шапка ----- */
+    /* ----- Шапка с навигацией ----- */
     .header {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem 1.5rem;
-      padding-bottom: 1.8rem;
+      gap: 1rem;
+      padding-bottom: 1.2rem;
       border-bottom: 2px solid #eef2f6;
-      margin-bottom: 2.2rem;
+      margin-bottom: 2rem;
     }
 
     .brand {
@@ -79,18 +79,37 @@
       color: #3b6ea0;
     }
 
-    .badge {
-      background: #eef4fa;
-      color: #1e4a6e;
-      padding: 0.35rem 1rem;
+    /* Меню навигации */
+    .nav-menu {
+      display: flex;
+      gap: 0.25rem;
+      background: #f1f5f9;
+      padding: 0.3rem;
       border-radius: 40px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.3px;
-      white-space: nowrap;
     }
 
-    /* ----- Типографика ----- */
+    .nav-menu a {
+      display: inline-block;
+      padding: 0.45rem 1.2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #4b647e;
+      transition: all 0.2s;
+    }
+
+    .nav-menu a:hover {
+      background: rgba(59, 110, 160, 0.08);
+    }
+
+    .nav-menu a.active {
+      background: #ffffff;
+      color: #0b1a2e;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    /* ----- Остальные стили (без изменений) ----- */
     h1 {
       font-size: 2.2rem;
       font-weight: 700;
@@ -128,20 +147,12 @@
       border-bottom: 2px solid #e7edf5;
     }
 
-    .section h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-top: 1.4rem;
-      margin-bottom: 0.5rem;
-      color: #1d3b58;
-    }
-
     .section p {
       margin-bottom: 0.9rem;
       color: #1f3349;
     }
 
-    .section ul, .section ol {
+    .section ul {
       margin: 0.6rem 0 1.2rem 1.8rem;
       color: #1f3349;
     }
@@ -149,7 +160,6 @@
     .section li {
       margin-bottom: 0.3rem;
     }
-
     .section li::marker {
       color: #3b6ea0;
     }
@@ -160,10 +170,6 @@
       padding: 1.2rem 1.6rem;
       margin: 1.6rem 0;
       border: 1px solid #e2ebf5;
-    }
-
-    .highlight-box p:last-child {
-      margin-bottom: 0;
     }
 
     .contact-email {
@@ -183,7 +189,6 @@
       margin: 2.6rem 0 1.2rem;
     }
 
-    /* ----- Футер ----- */
     .footer {
       margin-top: 2.8rem;
       padding-top: 1.6rem;
@@ -204,11 +209,9 @@
       border-bottom: 1px solid transparent;
       transition: border-color 0.15s;
     }
-
     .footer a:hover {
       border-bottom-color: #1e4a6e;
     }
-
     .footer small {
       display: block;
       margin-top: 0.3rem;
@@ -216,15 +219,6 @@
       color: #6f85a0;
     }
 
-    /* ----- Вспомогательные классы ----- */
-    .text-muted {
-      color: #5f7a97;
-    }
-
-    .mt-1 { margin-top: 0.5rem; }
-    .mb-1 { margin-bottom: 0.5rem; }
-
-    /* Оглавление (быстрая навигация) */
     .toc {
       background: #f8fafc;
       border-radius: 16px;
@@ -232,13 +226,11 @@
       margin: 1.2rem 0 2rem;
       border: 1px solid #e2ebf5;
     }
-
     .toc p {
       font-weight: 600;
       margin-bottom: 0.3rem;
       color: #0b1a2e;
     }
-
     .toc ul {
       list-style: none;
       display: flex;
@@ -247,11 +239,9 @@
       margin: 0;
       padding: 0;
     }
-
     .toc ul li {
       margin: 0;
     }
-
     .toc ul li a {
       color: #1e4a6e;
       text-decoration: none;
@@ -259,11 +249,9 @@
       border-bottom: 1px solid transparent;
       transition: border-color 0.15s;
     }
-
     .toc ul li a:hover {
       border-bottom-color: #1e4a6e;
     }
-
     @media (max-width: 500px) {
       .toc ul { flex-direction: column; gap: 0.1rem; }
       .toc { padding: 0.8rem 1.2rem; }
@@ -273,23 +261,25 @@
 <body>
   <div class="container">
 
-    <!-- ШАПКА -->
+    <!-- ШАПКА С МЕНЮ -->
     <header class="header">
       <div class="brand">
         <div class="brand-icon">NC</div>
         <div class="brand-name">New <span>Chapter</span></div>
       </div>
-      <div class="badge">Политика конфиденциальности</div>
+      <nav class="nav-menu">
+        <a href="index.html" class="active">Политика данных</a>
+        <a href="terms.html">Соглашение</a>
+      </nav>
     </header>
 
-    <!-- ЗАГОЛОВОК -->
     <h1>Политика обработки персональных данных</h1>
     <div class="subtitle">
       <strong>Дата публикации:</strong> 29.06.2026 &nbsp;·&nbsp; 
       Актуальная версия для пользователей сервисов New Chapter
     </div>
 
-    <!-- ОГЛАВЛЕНИЕ (быстрая навигация) -->
+    <!-- Оглавление и всё остальное (без изменений) -->
     <nav class="toc" aria-label="Содержание политики">
       <p>Содержание</p>
       <ul>
@@ -305,7 +295,6 @@
       </ul>
     </nav>
 
-    <!-- ТЕКСТ ПОЛИТИКИ -->
     <div class="section" id="s1">
       <h2>1. Общие положения</h2>
       <p>Настоящая Политика определяет порядок обработки и защиты персональных данных при использовании сервисов <strong>New Chapter</strong>.</p>
@@ -373,7 +362,6 @@
       </div>
     </div>
 
-    <!-- Дополнительная информация / контакты -->
     <div class="divider"></div>
     <div style="display: flex; flex-wrap: wrap; gap: 1.2rem 2.5rem; justify-content: space-between; align-items: center;">
       <div>
@@ -387,7 +375,6 @@
       </div>
     </div>
 
-    <!-- ФУТЕР -->
     <footer class="footer">
       <div>
         <span>© 2026 New Chapter</span>
@@ -399,6 +386,5 @@
     </footer>
 
   </div>
-  <!-- конец .container -->
 </body>
 </html>
